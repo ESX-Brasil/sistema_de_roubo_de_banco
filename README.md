@@ -8,3 +8,4 @@
 - [JokeDevil](https://github.com/JokeDevil) - Criador orginal do esx_doorlock
 - [Vanheden](https://github.com/Vanheden) - Implementações do sistema esx_holdupbank
 - [ESX-Brasil](https://github.com/ESX-Brasil) - Implementações de tradução e correções do script
+- [Knaak53](https://github.com/Knaak53) - Implementação do hacker / C4 e retrabalho.
