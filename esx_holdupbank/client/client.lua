@@ -151,6 +151,9 @@ AddEventHandler('esx_holdupbank:hackcomplete', function()
 
 	secondsRemaining = 0
 	incircle = false
+	-- clear animation
+	local ped = getPlayerPed(-1)
+	ClearPedTasksImmediately(ped)
 end)
 RegisterNetEvent('esx_holdupbank:plantbombcomplete')
 AddEventHandler('esx_holdupbank:plantbombcomplete', function(bank)
