@@ -164,6 +164,9 @@ AddEventHandler('esx_holdupbank:plantbombcomplete', function(bank)
 	TriggerServerEvent('esx_holdupbank:plantbombtoall', bank.bombposition.x,  bank.bombposition.y, bank.bombposition.z, bank.bombdoortype)
 
 	incircle = false
+	-- clear animation
+	local ped = getPlayerPed(-1)
+	ClearPedTasksImmediately(ped)
 end)
 
 RegisterNetEvent('esx_holdupbank:plantedbomb')
