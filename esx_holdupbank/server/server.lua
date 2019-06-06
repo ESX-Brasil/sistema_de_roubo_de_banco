@@ -280,7 +280,7 @@ end)
 
 RegisterServerEvent('esx_holdupbank:finishclear')
 AddEventHandler('esx_holdupbank:finishclear', function()
-	TriggerClientEvent('esx_blowtorch:finishclear', -1)
+	TriggerClientEvent('', -1)
 end)
 
 RegisterServerEvent('esx_holdupbank:closedoor')
