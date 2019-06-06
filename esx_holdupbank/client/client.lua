@@ -132,11 +132,12 @@ AddEventHandler('esx_holdupbank:robberycomplete', function(robb)
 	holdingup = false
 	ESX.ShowNotification(_U('robbery_complete') .. Banks[bank].reward)
 	bank = ""
+	TriggerEvent('esx_blowtorch:finishclear')
+	TriggerServerEvent('esx_holdupbank:closedoor')
+	TriggerEvent('esx_blowtorch:stopblowtorching')
 	secondsRemaining = 0
+	dooropen = false
 	incircle = false
-	-- clear animation
-	local ped = getPlayerPed(-1)
-	ClearPedTasksImmediately(ped)
 end)
 
 RegisterNetEvent('esx_holdupbank:hackcomplete')
@@ -150,7 +151,6 @@ AddEventHandler('esx_holdupbank:hackcomplete', function()
 
 	secondsRemaining = 0
 	incircle = false
-
 end)
 RegisterNetEvent('esx_holdupbank:plantbombcomplete')
 AddEventHandler('esx_holdupbank:plantbombcomplete', function(bank)
@@ -161,7 +161,6 @@ AddEventHandler('esx_holdupbank:plantbombcomplete', function(bank)
 	TriggerServerEvent('esx_holdupbank:plantbombtoall', bank.bombposition.x,  bank.bombposition.y, bank.bombposition.z, bank.bombdoortype)
 
 	incircle = false
-
 end)
 
 RegisterNetEvent('esx_holdupbank:plantedbomb')
