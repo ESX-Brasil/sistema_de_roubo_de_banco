@@ -85,8 +85,12 @@ function opendoors(success, timeremaining)
 		TriggerEvent('esx_holdupbank:hackcomplete')
 
 	else
+		hackholdingup = false
+		ESX.ShowNotification(_U('hack_failed'))
 		print('Failure')
 		TriggerEvent('mhacking:hide')
+		secondsRemaining = 0
+		incircle = false
 	end
 end
 
@@ -107,6 +111,7 @@ end)
 RegisterNetEvent('esx_holdupbank:toofarlocal')
 AddEventHandler('esx_holdupbank:toofarlocal', function(robb)
 	holdingup = false
+	bombholdingup = false
 	ESX.ShowNotification(_U('robbery_cancelled'))
 	robbingName = ""
 	secondsRemaining = 0
@@ -405,10 +410,10 @@ function plantBombAnimation()
 
 				TaskStartScenarioInPlace(playerPed, "CODE_HUMAN_MEDIC_KNEEL", 0, true)
 
-
 				if secondsRemaining <= 1 then
 					platingbomb = false
 					ClearPedTasksImmediately(PlayerPedId())
+
 				end
 				Citizen.Wait(0)
 			end
