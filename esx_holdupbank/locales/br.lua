@@ -21,6 +21,7 @@ Locales['br'] = {
 	['started_to_plantbomb'] = 'Você começou a plantar a bomba ',
 	['do_not_move'] = ', Não se mexa!',
 	['alarm_triggered'] = 'Os alarmes estão tocando',
+	['hack_failed'] = 'Sua tentativa de hackear a porta falhou',
 	['hold_pos'] = 'Mantenha 5 minutos e o dinheiro será seu!',
 	['hold_pos_hack'] = 'Segure enquanto você corta a porta de entrada e você pode acessar o interior!',
 	['hold_pos_plantbomb'] = 'Espere enquanto você bombeia a bomba, você está quase dentro!',

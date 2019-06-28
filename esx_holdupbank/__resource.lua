@@ -2,7 +2,7 @@ resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 description 'ES Holdup Bank'
 
-version '1.1.2'
+version '1.1.3'
 
 client_scripts {
 
@@ -10,6 +10,7 @@ client_scripts {
 	'locales/br.lua',
 	'locales/en.lua',
 	'locales/es.lua',
+	'locales/tr.lua',
 	'config.lua',
 	'client/client.lua'
 }
@@ -19,6 +20,7 @@ server_scripts {
 	'locales/br.lua',
 	'locales/en.lua',
 	'locales/es.lua',
+	'locales/tr.lua',
 	'config.lua',
 	'server/server.lua'
 }

@@ -15,9 +15,6 @@ globalbombcoords = nil
 globalbombrotation = nil
 globalbombDoortype = nil
 
-
-
-
 ESX = nil
 
 Citizen.CreateThread(function()
