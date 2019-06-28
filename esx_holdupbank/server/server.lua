@@ -1,7 +1,7 @@
 local rob = false
 local robbers = {}
 ESX = nil
--
+
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 function get3DDistance(x1, y1, z1, x2, y2, z2)

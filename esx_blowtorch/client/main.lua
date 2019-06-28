@@ -38,7 +38,7 @@ end)
 
 RegisterNetEvent('esx_blowtorch:clearweld')
 AddEventHandler('esx_blowtorch:clearweld', function(x,y,z)
-		ESX.ShowNotification(' llego')
+		--ESX.ShowNotification(' llego')
 		clearweld = true
 		Citizen.CreateThread(function()
 			while clearweld do
@@ -54,7 +54,7 @@ AddEventHandler('esx_blowtorch:stopblowtorching', function()
 	blowtorching = false
 	blowtorchingtime = 0
 	ClearPedTasksImmediately(GetPlayerPed(-1))
-	ESX.ShowNotification('cancelo blowtorch')
+	--ESX.ShowNotification('cancelo blowtorch')
 end)
 
 function blowtorchAnimation()
@@ -68,12 +68,12 @@ function blowtorchAnimation()
 				while blowtorching do
 						Wait(2000)
 						TaskStartScenarioInPlace(playerPed, "WORLD_HUMAN_WELDING", 0, true)
-						ESX.ShowNotification('pongo anim')
+						--ESX.ShowNotification('pongo anim')
 						blowtorchingtime = blowtorchingtime - 1
 						if blowtorchingtime <= 0 then
 							blowtorching = false
 							ClearPedTasksImmediately(PlayerPedId())
-							ESX.ShowNotification('quito anim')
+							--ESX.ShowNotification('quito anim')
 						end
 				end
 			end)
