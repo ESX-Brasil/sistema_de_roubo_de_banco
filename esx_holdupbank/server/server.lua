@@ -84,7 +84,7 @@ AddEventHandler('esx_holdupbank:rob', function(robb)
 					for i=1, #xPlayers, 1 do
 						local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
 						if xPlayer.job.name == 'police' then
-								TriggerClientEvent('chatMessage', -1, 'NEWS', {255, 0, 0}, "Roubo em andamento em ^2" .. bank.nameofbank)
+								TriggerClientEvent('chatMessage', -1, 'NEWS', {255, 0, 0}, "Robbery in progress at ^2" .. bank.nameofbank)
 								TriggerClientEvent('esx:showNotification', xPlayers[i], _U('rob_in_prog') .. bank.nameofbank)
 								TriggerClientEvent('esx_holdupbank:killblip', xPlayers[i])
 								TriggerClientEvent('esx_holdupbank:setblip', xPlayers[i], Banks[robb].position)
@@ -216,7 +216,7 @@ AddEventHandler('esx_holdupbank:plantbomb', function(robb)
 				for i=1, #xPlayers, 1 do
 				local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
 					if xPlayer.job.name == 'police' then
-						TriggerClientEvent('chatMessage', -1, 'NEWS', {255, 0, 0}, "Roubo em andamento em ^2" .. bank.nameofbank)
+						TriggerClientEvent('chatMessage', -1, 'NEWS', {255, 0, 0}, "Robbery in progress at ^2" .. bank.nameofbank)
 						TriggerClientEvent('esx:showNotification', xPlayers[i], _U('rob_in_prog') .. bank.nameofbank)
 						TriggerClientEvent('esx_holdupbank:setblip', xPlayers[i], Banks[robb].position)
 					end
